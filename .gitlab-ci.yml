@@ -6,4 +6,4 @@ move to test:
   script:
     - whoami
     - sudo rsync -avz * /etc/puppetlabs/code/environments/$CI_COMMIT_REF_NAME/
-    - chown -R :root /etc/puppetlabs/code/environments/$CI_COMMIT_REF_NAME/
+    - sudo chown -R :root /etc/puppetlabs/code/environments/$CI_COMMIT_REF_NAME/
