@@ -4,4 +4,4 @@ stages:
 move to test:
   stage: deploy
   script:
-    - rsync -rav * /etc/puppetlabs/code/environments/$CI_COMMIT_REF_NAME/
+    - sudo rsync -rav * /etc/puppetlabs/code/environments/$CI_COMMIT_REF_NAME/
