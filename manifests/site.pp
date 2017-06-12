@@ -32,13 +32,13 @@ node default {
 }
 
 node 'puppet.mcgahee.homelab' {
-  include ::role:puppetmaster
+  include role::puppetmaster
 }
 
 node 'dns.mcgahee.homelab' {
-  include ::role:dns_server
+  include role::dns_server
 }
 
 node 'gitlab.mcgahee.homelab' {
-  include ::role:gitlab_server
+  include role::gitlab_server
 }
