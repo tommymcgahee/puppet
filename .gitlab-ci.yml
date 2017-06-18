@@ -5,5 +5,8 @@ move to test:
   stage: deploy
   script:
     - whoami
-    - sudo rsync -avz * /etc/puppetlabs/code/environments/$CI_COMMIT_REF_NAME/
-    - sudo chown -R root:root /etc/puppetlabs/code/environments/$CI_COMMIT_REF_NAME/
+    #- sudo rsync -avz * /etc/puppetlabs/code/environments/$CI_COMMIT_REF_NAME/
+    #- sudo chown -R root:root /etc/puppetlabs/code/environments/$CI_COMMIT_REF_NAME/
+    - git -C /etc/puppetlabs/code/environments/
+    - git fetch --all 
+    - git reset --hard "origin/$CI_COMMIT_REF_NAME"
