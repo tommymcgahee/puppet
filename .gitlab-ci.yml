@@ -2,6 +2,7 @@ stages:
   - deploy
 
 before_script:
+- whoami
 - eval $(ssh-agent -s)
 - ssh-add
 - BASEPATH="/etc/puppetlabs/code/environments/"
@@ -9,6 +10,5 @@ before_script:
 Sync changes to Puppet Master:
   stage: deploy
   script:
-    - whoami
     - sudo git -C $BASEPATH fetch --all 
     - sudo git -C $BASEPATH reset --hard "origin/$CI_COMMIT_REF_NAME"
