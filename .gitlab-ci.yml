@@ -1,14 +1,14 @@
 stages:
   - deploy
 
-move to test:
+before_script:
+- eval $(ssh-agent -s)
+- ssh-add
+- BASEPATH="/etc/puppetlabs/code/environments/"
+
+Sync changes to Puppet Master:
   stage: deploy
   script:
     - whoami
-    #- sudo rsync -avz * /etc/puppetlabs/code/environments/$CI_COMMIT_REF_NAME/
-    #- sudo chown -R root:root /etc/puppetlabs/code/environments/$CI_COMMIT_REF_NAME/
-    - BASEPATH="/etc/puppetlabs/code/environments/"
-    - eval `ssh-agent`
-    - ssh-add
     - sudo git -C $BASEPATH fetch --all 
     - sudo git -C $BASEPATH reset --hard "origin/$CI_COMMIT_REF_NAME"
