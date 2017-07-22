@@ -1,6 +1,7 @@
 class role::puppetmaster {
 
   include profile::base
-  include profile::puppetdb
+  include profile::ruby
+# include profile::puppetdb
 
 }

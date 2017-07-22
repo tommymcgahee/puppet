@@ -1,30 +1,39 @@
-forge "http://forge.puppetlabs.com"
+#!/usr/bin/env ruby
+#^syntax detection
 
-# Modules from the Puppet Forge
-# Versions should be updated to be the latest at the time you start
-#mod "puppetlabs/inifile",     '1.5.0'
-#mod "puppetlabs/stdlib",      '4.11.0'
-#mod "puppetlabs/concat",      '2.1.0'
+forge "https://forgeapi.puppetlabs.com"
 
-"ajjahn/dns", 'v2.1.0'
-"camptocamp/augeas", 'v1.6.0'
-"camptocamp/postfix", 'v1.5.0'
-"puppetlabs/apt", 'v2.4.0'
-"puppetlabs/concat", 'v2.2.1'
-"puppetlabs/firewall", 'v1.9.0'
-"puppetlabs/inifile", 'v1.6.0'
-"puppetlabs/ntp", 'v6.2.0'
-"puppetlabs/postgresql", 'v4.9.0'
-"puppetlabs/puppetdb", 'v5.1.2'
-"puppetlabs/stdlib", 'v4.17.0'
-"vshn/gitlab", 'v1.14.0'
+# use dependencies defined in metadata.json
+#metadata
 
-# Modules from Git
-# Examples: https://github.com/puppetlabs/r10k/blob/master/doc/puppetfile.mkd#examples
-#mod 'apache',
-#  :git    => 'https://github.com/puppetlabs/puppetlabs-apache',
-#  :commit => '83401079053dca11d61945bd9beef9ecf7576cbf'
+# use dependencies defined in Modulefile
+# modulefile
 
-#mod 'apache',
-#  :git    => 'https://github.com/puppetlabs/puppetlabs-apache',
-#  :branch => 'docs_experiment'
+# A module from the Puppet Forge
+# mod 'puppetlabs-stdlib'
+
+# A module from git
+# mod 'puppetlabs-ntp',
+#   :git => 'git://github.com/puppetlabs/puppetlabs-ntp.git'
+
+# A module from a git branch/tag
+# mod 'puppetlabs-apt',
+#   :git => 'https://github.com/puppetlabs/puppetlabs-apt.git',
+#   :ref => '1.4.x'
+
+# A module from Github pre-packaged tarball
+# mod 'puppetlabs-apache', '0.6.0', :github_tarball => 'puppetlabs/puppetlabs-apache'
+
+mod "puppetlabs-ruby", '1.0.0'
+mod "ajjahn/dns", '2.1.0'
+mod "camptocamp/augeas", '1.6.0'
+mod "camptocamp/postfix", '1.5.0'
+mod "puppetlabs/apt", '2.4.0'
+mod "puppetlabs/concat", '2.2.1'
+mod "puppetlabs/firewall", '1.9.0'
+mod "puppetlabs/inifile", '1.6.0'
+mod "puppetlabs/ntp", '6.2.0'
+mod "puppetlabs/postgresql", '4.9.0'
+mod "puppetlabs/puppetdb", '5.1.2'
+mod "puppetlabs/stdlib", '4.17.0'
+mod "vshn/gitlab", '1.14.0'
