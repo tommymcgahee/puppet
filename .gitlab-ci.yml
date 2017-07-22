@@ -6,7 +6,6 @@ before_script:
 - eval $(ssh-agent -s)
 - ssh-add
 - BASEPATH="/etc/puppetlabs/code/environments/"
-- export PATH=/opt/puppetlabs/bin:$PATH
 - sudo puppet agent -t 
 
 Sync changes to Puppet Master:
