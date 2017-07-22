@@ -11,6 +11,7 @@ Sync changes to Puppet Master:
   stage: deploy
   script:
     - sudo git -C $BASEPATH fetch --all
-    - cd $BASEPATH/$CI_COMMIT_REF_NAME
-    - sudo git reset --hard "origin/$CI_COMMIT_REF_NAME"
-    - sudo librarian-puppet install --clean --verbose --path=$BASEPATH/$CI_COMMIT_REF_NAME
+    - cd $BASEPATH/$CI_COMMIT_REF_NAME/
+    - pwd
+    - sudo git reset --hard "origin/$CI_COMMIT_REF_NAME" .
+    - sudo librarian-puppet install --clean --verbose --path=$BASEPATH/$CI_COMMIT_REF_NAME/modules/
