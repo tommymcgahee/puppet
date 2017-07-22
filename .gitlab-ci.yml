@@ -7,7 +7,7 @@ before_script:
 - ssh-add
 - BASEPATH="/etc/puppetlabs/code/environments/"
 - export PATH=/opt/puppetlabs/bin:$PATH
-- puppet agent -t 
+- sudo puppet agent -t 
 
 Sync changes to Puppet Master:
   stage: deploy
