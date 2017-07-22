@@ -13,4 +13,4 @@ Sync changes to Puppet Master:
   script:
     - sudo git -C $BASEPATH fetch --all 
     - sudo git -C $BASEPATH reset --hard "origin/$CI_COMMIT_REF_NAME"
-    - sudo librarian-puppet install --clean --verbose
+    #- sudo librarian-puppet install --clean --verbose
