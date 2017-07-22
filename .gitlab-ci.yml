@@ -11,5 +11,5 @@ Sync changes to Puppet Master:
   stage: deploy
   script:
     - sudo git -C $BASEPATH fetch --all
-    - sudo  git -C $BASEPATH reset --hard "origin/$CI_COMMIT_REF_NAME"
+    - if [ -d "$BASEPATH" ]; then sudo  git -C $BASEPATH reset --hard "origin/$CI_COMMIT_REF_NAME" else sudo git clone $BASEPATH --branch "origin/$CI_COMMIT_REF_NAME" fi1
     - sudo librarian-puppet install --clean --verbose --path=$BASEPATH/modules/
