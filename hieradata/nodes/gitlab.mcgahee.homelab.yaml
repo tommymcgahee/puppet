@@ -1,0 +1,3 @@
+---
+classes:
+  - 'profile::gitlab_community_edition_omnibus'
