@@ -9,6 +9,7 @@ before_script:
 Sync changes to Puppet Master:
   stage: deploy
   script:
-    - export BASEPATH="/etc/puppetlabs/code/environments"
-    - export CI_COMMIT_REF_NAME=$CI_COMMIT_REF_NAME
-#    - sh scripts/git-to-puppet-environments.sh
+    #- export BASEPATH="/etc/puppetlabs/code/environments"
+    #- export CI_COMMIT_REF_NAME=$CI_COMMIT_REF_NAME
+    #- sh scripts/git-to-puppet-environments.sh
+    - /opt/puppetlabs/puppet/bin/r10k deploy environment -p
