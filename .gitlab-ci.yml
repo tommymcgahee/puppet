@@ -11,4 +11,4 @@ Sync changes to Puppet Master:
   script:
     - export BASEPATH="/etc/puppetlabs/code/environments"
     - export CI_COMMIT_REF_NAME=$CI_COMMIT_REF_NAME
-    - sh scripts/git-to-puppet-environments.sh
+#    - sh scripts/git-to-puppet-environments.sh
