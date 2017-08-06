@@ -35,5 +35,9 @@ class profile::bind {
         zone => 'mcgahee.homelab',
         data => ['192.168.1.109'],
         ptr  => true; # Creates a matching reverse zone record.  Make sure you've added the proper reverse zone in the manifest.
+      'web':
+        zone => 'mcgahee.homelab',
+        data => ['192.168.1.110'],
+        ptr  => true; # Creates a matching reverse zone record.  Make sure you've added the proper reverse zone in the manifest.
     }
 }
