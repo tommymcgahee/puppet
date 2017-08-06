@@ -1,0 +1,17 @@
+---
+apache::vhost:
+  'web.mcgahee.homelab':
+    serveraliases:
+        - 'www.web.mcgahee.homelab'
+    port: '80'
+    docroot: '/var/www/html/'
+    redirect_status: 'permanent'
+    redirect_dest: 'https://web.mcgahee.homelab/'
+  'web.mcgahee.homelab':
+    serveraliases:
+        - 'www.web.mcgahee.homelab'
+    port: '443'
+    docroot: '/var/www/html/'
+    ssl: true
+    ssl_cert: '/etc/ssl/web.crt'
+    ssl_key: '/etc/ssl/web.key'
