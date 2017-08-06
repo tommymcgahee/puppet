@@ -3,24 +3,24 @@ classes:
   - 'profile::bind'
 
 # A Records:
-profile::bind::dns::record::a:
-    puppet:
-        zone: 'mcgahee.homelab'
-        data: '["192.168.1.104"]'
-        ptr:  true
-    dns:
-        zone: 'mcgahee.homelab'
-        data: '["192.168.1.107"]'
-        ptr:  true
-    gitlab:
-        zone: 'mcgahee.homelab'
-        data: '["192.168.1.109"]'
-        ptr:  true
-    web:
-        zone: 'mcgahee.homelab'
-        data: '["192.168.1.110"]'
-        ptr:  true
-    drupal:
-        zone: 'mcgahee.homelab'
-        data: '["192.168.1.110"]'
-        ptr:  true
+#profile::bind::dns::record::a:
+#    puppet:
+#        zone: 'mcgahee.homelab'
+#        data: '["192.168.1.104"]'
+#        ptr:  true
+#    dns:
+#        zone: 'mcgahee.homelab'
+#        data: '["192.168.1.107"]'
+#        ptr:  true
+#    gitlab:
+#        zone: 'mcgahee.homelab'
+#        data: '["192.168.1.109"]'
+#        ptr:  true
+#    web:
+#        zone: 'mcgahee.homelab'
+#        data: '["192.168.1.110"]'
+#        ptr:  true
+#    drupal:
+#        zone: 'mcgahee.homelab'
+#        data: '["192.168.1.110"]'
+#        ptr:  true
