@@ -5,7 +5,5 @@ class profile::apache {
     }
 
     $myApacheVhosts = hiera('apache::vhosts', {})
-    $createSelfSignedCerts = hiera('apache::vhosts::selfcerts', {})
-    
-    create_resources('apache::vhost', $myApacheVhosts, $createSelfSignedCerts)
+    create_resources('apache::vhost', $myApacheVhosts)
 }
