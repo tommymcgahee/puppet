@@ -3,7 +3,7 @@ classes:
   - 'profile::apache'
   
 apache::vhosts:  
-    drupal.mcgahee.homelab:
+    drupal.web.mcgahee.homelab:
         port: '443'
         docroot: '/var/www/html/'
         ssl: true
