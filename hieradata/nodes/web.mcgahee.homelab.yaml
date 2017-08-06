@@ -18,7 +18,7 @@ apache::vhosts:
     ssl_key: '/etc/apache2/ssl/web.mcgahee.homelab.key'
     
 apache::vhosts::selfcerts: 
-  exec: 'create_self_signed_sslcert'
+  exec:
     command: 'openssl req -newkey rsa:2048 -nodes -keyout ${apache::vhost::vhost_name}.key  -x509 -days 365 -out ${apache::vhost::vhost_name}.crt -subj "/CN=${apache::vhost::vhost_name}"'
     cwd: '/etc/ssl/'
     creates: '[ "/etc/ssl/${apache::vhost::vhost_name}.key", "/etc/ssl/${apache::vhost::vhost_name}.crt", ]'
