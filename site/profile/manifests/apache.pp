@@ -11,6 +11,6 @@ class profile::apache {
         path    => ["/usr/bin", "/usr/sbin"]
     }
   
-    $myApacheVhosts = hiera('apache::vhosts', {})
-    create_resources('apache::vhost', $myApacheVhosts)
+    #$myApacheVhosts = hiera('apache::vhosts', {})
+    #create_resources('apache::vhost', $myApacheVhosts)
 }
