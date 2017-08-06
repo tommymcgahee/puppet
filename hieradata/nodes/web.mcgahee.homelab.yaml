@@ -1,4 +1,7 @@
 ---
+classes: 
+  - 'profile::apache'
+  
 apache::vhosts:
   web.mcgahee.homelab:
     port: '80'
