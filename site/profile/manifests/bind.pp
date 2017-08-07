@@ -40,4 +40,10 @@ class profile::bind {
         data => ['192.168.1.110'],
         ptr  => true; # Creates a matching reverse zone record.  Make sure you've added the proper reverse zone in the manifest.
     }
+  # CNAME Record:
+  dns::record::cname { 
+    'drupal':
+        zone => 'mcgahee.homelab',
+        data => 'web.mcgahee.homelab',
+    }
 }
