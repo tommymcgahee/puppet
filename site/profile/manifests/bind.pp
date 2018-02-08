@@ -1,26 +1,26 @@
 class profile::bind {
-    
+
     include dns::server
-    
+
     # Forwarders
     dns::server::options { '/etc/bind/named.conf.options':
       forwarders => [ '192.168.1.1','8.8.8.8', '8.8.4.4' ]
     }
-    
+
     # Forward Zone
     dns::zone { 'mcgahee.homelab':
       soa         => 'dns.mcgahee.homelab',
       soa_email   => 'admin.mcgahee.homelab',
       nameservers => ['dns']
     }
-    
+
     # Reverse Zone
     dns::zone { '1.168.192.IN-ADDR.ARPA':
       soa         => 'dns.mcgahee.homelab',
       soa_email   => 'admin.mcgahee.homelab',
       nameservers => ['dns']
     }
-    
+
     # A Records:
     dns::record::a {
       'puppet':
@@ -41,12 +41,12 @@ class profile::bind {
         ptr  => true; # Creates a matching reverse zone record.  Make sure you've added the proper reverse zone in the manifest.
     }
   # CNAME Record:
-  dns::record::cname { 
+  dns::record::cname {
     'drupal':
         zone => 'mcgahee.homelab',
-        data => 'web.mcgahee.homelab',
+        data => 'web.mcgahee.homelab'
     'interview':
-        zone => 'mcgahee.homelab', 
-        data => 'web.mcgahee.homelab', 
+        zone => 'mcgahee.homelab',
+        data => 'web.mcgahee.homelab'
     }
 }
