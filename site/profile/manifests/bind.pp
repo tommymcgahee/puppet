@@ -45,5 +45,8 @@ class profile::bind {
     'drupal':
         zone => 'mcgahee.homelab',
         data => 'web.mcgahee.homelab',
+    'interview':
+        zone => 'mcgahee.homelab', 
+        data => 'web.mcgahee.homelab', 
     }
 }
