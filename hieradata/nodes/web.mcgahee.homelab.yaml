@@ -11,7 +11,7 @@ apache::vhosts:
         port: '443'
         docroot: '/var/www/html/'
         ssl: true
-    interview.mcgahee.homelab:
-        port: '443'
-        docroot: '/var/www/html/'
-        ssl: true
+    # interview.mcgahee.homelab:
+    #     port: '443'
+    #     docroot: '/var/www/html/'
+    #     ssl: true
