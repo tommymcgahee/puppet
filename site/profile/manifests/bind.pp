@@ -44,9 +44,9 @@ class profile::bind {
   dns::record::cname {
     'drupal':
         zone => 'mcgahee.homelab',
-        data => 'web.mcgahee.homelab'
+        data => 'web.mcgahee.homelab';
     'interview':
         zone => 'mcgahee.homelab',
-        data => 'web.mcgahee.homelab'
+        data => 'web.mcgahee.homelab';
     }
 }
