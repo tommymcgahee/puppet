@@ -46,9 +46,9 @@ class profile::bind {
         zone => 'mcgahee.homelab',
         data => 'web.mcgahee.homelab';
 
-    # 'interview':
-    #    zone => 'mcgahee.homelab',
-    #    data => 'web.mcgahee.homelab';
-    
+     'interview':
+        zone => 'mcgahee.homelab',
+        data => 'web.mcgahee.homelab';
+
     }
 }
